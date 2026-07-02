@@ -8,16 +8,70 @@
 <body>
     <h1>Objetos JavaScript</h1>
 
-    <script>
+<script>
         const pessoa = {
             nome: "João",
-            idade: 30,
+            idade: 30 ,
             saudacao: function() {
                 console.log("Olá, meu nome é " + this.nome);
             }
         };
-
         pessoa.saudacao();
-    </script>
+
+        const carro = {
+            marca: "Renaut",
+            tipo: "Sandero",
+            ano: 2013 ,
+
+            idade: function() {
+                console.log("Este carro tem " + 2026-this.ano + " anos");
+            }
+        };
+        carro.idade();
+
+        const cachorro = {
+            nome: "Francisco Teixeira",
+            raca: "Chihuahua",
+            tutor: "Mariana da Silva",
+
+            apresentacao: function() {
+                console.log(this.nome + " é da raça "+this.raca);
+            }
+        };
+        cachorro.apresentacao();
+
+        const Estado = {
+            nome: "Brasil",
+            continente: "Sul-Americano",
+            gentilico: "brasileiro",
+
+            turista: function() {
+                console.log("Estou no continente " + this.continente + ", no país " + this.nome + ". Já posso me considerar " + this.gentilico);
+            }
+        };
+        Estado.turista();
+
+        const prof = {
+            nome: "Joedio",
+            materia: "Desenvolvimento Web II",
+            escola: "IFC Sombrio" ,
+
+            aula: function() {
+                console.log("Bom dia, sou o(a) prof(a) " + this.nome + ", hoje estudaremos " + this.materia);
+            }
+        };
+        prof.aula();
+
+        const celular = {
+            marca: "Xiaomi",
+            modelo: "Redmi Note 9",
+            usuario: "Evelyn",
+
+            posse: function() {
+                console.log("A/O " + this.nome + " tem um " + this.modelo);
+            }
+        };
+            celular.posse();
+</script>
 </body>
 </html>
